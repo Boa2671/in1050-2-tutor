@@ -28,7 +28,7 @@ Los estudiantes universitarios suelen tener dudas fuera del horario de clase y n
 | Tarea (pipeline tag) | `text-generation` (chat instruct) |
 | Parámetros | ≈ 1.23 mil millones (1.23B) |
 | Licencia | Llama 3.2 Community License |
-| Limitación declarada por sus autores | COMPLETAR: copiar tal cual el texto de la sección "Ethical Considerations and Limitations" de la Model Card, entre comillas |
+| Limitación declarada por sus autores | Las pruebas se realizaron principalmente en inglés y no cubrieron todos los escenarios posibles, por lo que el modelo puede producir en ocasiones respuestas inexactas, sesgadas o inapropiadas ante ciertas instrucciones. |
 
 ## Cómo funciona
 ```mermaid
