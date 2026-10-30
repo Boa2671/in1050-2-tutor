@@ -1,5 +1,5 @@
 # Tutor conversacional de repaso para estudiantes universitarios
- Proyecto integrador de \*\*Herramientas de Procesamiento para IA (IN1050)\*\* · Universidad Iberoamericana León · Otoño 2026 · Equipo \*\*VRAM Squad\*\*.
+ Proyecto integrador de **Herramientas de Procesamiento para IA (IN1050)** · Universidad Iberoamericana León · Otoño 2026 · Equipo **VRAM Squad**.
 
 > Un tutor conversacional en español que ayuda a estudiantes universitarios a repasar un tema cuando no tienen a un profesor o compañero disponible, especialmente en semanas de alta carga académica. Funciona con un modelo abierto de lenguaje pequeño, ejecutado en Google Colab.
 
@@ -11,7 +11,7 @@
 | Angela de la Rosa Sevilla | Investigación |
 | Alejandro Zapien Castrejón | README |
 
-Las fichas de cada integrante están en la carpeta \[`equipo/`](equipo/).
+Las fichas de cada integrante están en la carpeta [`equipo`](equipo).
 
 ## Problemática
 Los estudiantes universitarios suelen tener dudas fuera del horario de clase y no siempre hay un profesor o compañero a quien preguntar, sobre todo en semanas de exámenes y entregas. Esto deja dudas sin resolver o las lleva a buscar explicaciones dispersas en internet. Este proyecto propone una primera explicación disponible en cualquier momento, sin sustituir al profesor. El análisis completo está en \[`docs/investigacion.md`](docs/investigacion.md).
@@ -24,7 +24,7 @@ Los estudiantes universitarios suelen tener dudas fuera del horario de clase y n
 ## Modelo
 | Campo | Valor |
 |---|---|
-| Identificador | \[`meta-llama/Llama-3.2-1B-Instruct`](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) |
+| Identificador | [`meta-llama/Llama-3.2-1B-Instruct`](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) |
 | Tarea (pipeline tag) | `text-generation` (chat instruct) |
 | Parámetros | ≈ 1.23 mil millones (1.23B) |
 | Licencia | Llama 3.2 Community License |
@@ -32,26 +32,21 @@ Los estudiantes universitarios suelen tener dudas fuera del horario de clase y n
 
 ## Cómo funciona
 ```mermaid
-flowchart LR
-
-A\[/"Estudiante escribe su duda"/] -->|"pregunta en español"| B\["Aplicación de chat en Colab"]
-
-B -->|"busca fragmentos"| E\[("Apuntes del curso")]
-
-E -->|"fragmentos relevantes"| B
-
-B -->|"prompt de sistema + pregunta + fragmentos"| C{{"Llama-3.2-1B-Instruct"}}
-
-C -->|"respuesta generada"| D(\["Explicación breve + aviso de verificación"])
-
-D --> A
-
- ```
+flowchart TD
+	A([Usuario ingresa texto en el modelo LLama-3.2.1]) --> |texto| B[Un modelo de voz a texto transcribe lo que dijo]
+	B --> |texto| C[Modelo escribe la respuesta]
+	C --> |texto| D{Usuario lee la respuesta}
+	D --> |texto| E[Usuario pregunta más cosas y se vuelve a llamar al modelo]
+	D --> F([Fin])
+```
 
 ## Infraestructura
 Memoria mínima para los pesos del modelo, en precisión FP16 (2 bytes por parámetro):
  
- M\_{\\text{pesos}} = 1.23 \\times 10^{9}\\ \\text{parámetros} \\times 2\\ \\text{bytes} \\approx 2.46 \\times 10^{9}\\ \\text{bytes} \\approx 2.46\\ \\text{GB}
+$$
+\text{Memoria mínima} = 1.23B \times 2\ \text{bytes} \approx \ 2.46\ \text{GB}
+$$
+
 Al sumar activaciones, KV cache y overhead del framework, el consumo real en una sesión de chat típica ronda entre 4 y 6 GB de VRAM. La GPU gratuita de Colab (Tesla T4) tiene 14.56 GB de VRAM, así que el modelo cabe con margen amplio.
 
 **Dónde correrá:** localmente en **Colab con GPU**, en lugar de usar una API. El modelo es pequeño y cabe cómodamente en la T4, lo que evita costos por petición y permite iterar sobre el prompt del tutor sin depender de un proveedor externo.
