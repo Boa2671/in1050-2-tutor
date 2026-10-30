@@ -14,7 +14,7 @@
 Las fichas de cada integrante están en la carpeta [`equipo`](equipo).
 
 ## Problemática
-Los estudiantes universitarios suelen tener dudas fuera del horario de clase y no siempre hay un profesor o compañero a quien preguntar, sobre todo en semanas de exámenes y entregas. Esto deja dudas sin resolver o las lleva a buscar explicaciones dispersas en internet. Este proyecto propone una primera explicación disponible en cualquier momento, sin sustituir al profesor. El análisis completo está en \[`docs/investigacion.md`](docs/investigacion.md).
+Los estudiantes universitarios suelen tener dudas fuera del horario de clase y no siempre hay un profesor o compañero a quien preguntar, sobre todo en semanas de exámenes y entregas. Esto deja dudas sin resolver o las lleva a buscar explicaciones dispersas en internet. Este proyecto propone una primera explicación disponible en cualquier momento, sin sustituir al profesor. El análisis completo está en [`docs/investigacion.md`](docs/investigacion.md).
 
 ## Caso de uso
 - **Usuario:** estudiante universitario que quiere repasar un tema.
