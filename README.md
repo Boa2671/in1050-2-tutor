@@ -6,10 +6,10 @@
 ## Equipo
 | Integrante | Papel en el proyecto |
 |---|---|
-| Uriel Gutiérrez Mosqueira | Investigación |
-| Sebastián Guerrero Ambriz | README |
-| Angela de la Rosa Sevilla | Investigación |
-| Alejandro Zapien Castrejón | README |
+| Uriel Gutiérrez Mosqueira | Investigación: impacto ético y referencias |
+| Sebastián Guerrero Ambriz | Estructura del repositorio y README |
+| Angela de la Rosa Sevilla | Investigación: el problema y soluciones existentes |
+| Alejandro Zapien Castrejón | Investigación: modelo, usuarios y requisitos |
 
 Las fichas de cada integrante están en la carpeta [`equipo`](equipo).
 
