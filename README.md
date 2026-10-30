@@ -87,7 +87,9 @@ Para el Parcial III:
 
 
 ## Referencias
-1\. Meta. \*Llama-3.2-1B-Instruct, Model Card\*. Hugging Face. <https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct>
-2\. Meta. \*Llama 3.2 Community License Agreement\*. <https://www.llama.com/llama3\_2/license/>
-3\. Meta. \*Responsible Use Guide\*. <https://ai.meta.com/llama/responsible-use-guide/>
+1. Meta. *Llama-3.2-1B-Instruct, Model Card*. Hugging Face. <https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct>
+
+2. Meta. *Llama 3.2 Community License Agreement*. <https://www.llama.com/llama3\_2/license/>
+
+3. Meta. *Responsible Use Guide*. <https://ai.meta.com/llama/responsible-use-guide/>
 
