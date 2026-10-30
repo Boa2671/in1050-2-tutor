@@ -1,6 +1,3 @@
-*# Sebastián  Guerrero*
-
-
-
-*Rol en el proyecto: README y diagrama*
+# Sebastián  Guerrero
+Rol en el proyecto: Estructura del repositorio y README
 
