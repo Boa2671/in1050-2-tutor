@@ -61,29 +61,21 @@ La retroalimentación del profesor nos pidió definir qué podemos añadir nosot
 
 - **Un prompt de sistema** que define el comportamiento del tutor: respuestas breves en español, a nivel universitario, y pidiendo aclaración cuando la duda es ambigua.
 
-- **Una capa de recuperación de documentos (RAG)** con material del curso, para que las explicaciones se apoyen en fuentes verificables y no solo en lo que el modelo aprendió durante su entrenamiento.
+- **Un prompt de sistema** que defina el comportamiento del tutor: respuestas breves en español, a nivel universitario, y pidiendo aclaración cuando la duda es ambigua.
+- **Un modo quiz** que, a petición del estudiante, genere preguntas de práctica sobre el tema explicado para que pueda comprobar si lo entendió.
+
 
 ## Siguientes pasos
 
 Para el Parcial III:
 
-- \[ ] Escribir el prompt de sistema del tutor (español, nivel universitario, respuestas breves, pide aclaración si la duda es ambigua)
-
-- \[ ] Preparar un conjunto pequeño de apuntes del curso en texto para usarlo como base de conocimiento
-
-- \[ ] Implementar la recuperación de fragmentos (RAG) para que las respuestas se apoyen en ese material
-
-- \[ ] Implementar la conversación de varios turnos, conservando el historial del chat
-
-- \[ ] Mostrar el aviso de verificación en cada respuesta
-
-- \[ ] Construir una interfaz sencilla de chat (por ejemplo, con Gradio)
-
-- \[ ] Probar el tutor con preguntas de distintas materias, comparar respuestas con y sin RAG y registrar los errores
-
-- \[ ] Subir el código de la aplicación a este repositorio
-
-- \[ ] Preparar la presentación del proyecto
+- [ ] Escribir el prompt de sistema del tutor (español, nivel universitario, respuestas breves, pide aclaración si la duda es ambigua)
+- [ ] Implementar el modo quiz con un prompt que genere preguntas de práctica sobre el tema explicado
+- [ ] Mostrar el aviso de verificación en cada respuesta, incluidas las del quiz
+- [ ] Construir una interfaz sencilla de chat 
+- [ ] Probar el tutor con preguntas de distintas materias y registrar los errores, también los del quiz
+- [ ] Evaluar si la calidad en español del modelo de 1B es suficiente
+- [ ] Subir el código de la aplicación a este repositorio
 
 
 ## Referencias
